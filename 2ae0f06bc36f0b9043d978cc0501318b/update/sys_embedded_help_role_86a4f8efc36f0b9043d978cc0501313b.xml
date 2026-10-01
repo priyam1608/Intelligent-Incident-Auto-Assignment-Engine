@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_1921751_incide_0.team_lead" name="x_1921751_incide_0.team_lead">7094b063c3af0b9043d978cc050131fa</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-01 13:40:51</sys_created_on>
+        <sys_id>86a4f8efc36f0b9043d978cc0501313b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>7094b063c3af0b9043d978cc050131fa</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sys_embedded_help_role_86a4f8efc36f0b9043d978cc0501313b</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-01 13:40:51</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
