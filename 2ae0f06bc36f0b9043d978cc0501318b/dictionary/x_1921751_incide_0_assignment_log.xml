@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="bae844f4c3bf83d043d978cc0501319d" label="Assignment Log" max_length="40" name="x_1921751_incide_0_assignment_log" type="collection">
+        <element default="javascript:new GlideDateTime();" label="Timestamp" max_length="40" name="timestamp" read_only="true" read_only_option="display_read_only" type="glide_date_time"/>
+        <element choice="1" label="Assignment Type" mandatory="true" max_length="40" name="assignment_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="P1 Override" sequence="500" value="p1_override"/>
+                <element inactive_on_update="false" label="Re-assignment - SLA Risk" sequence="200" value="reassign_sla_risk"/>
+                <element inactive_on_update="false" label="Fallback - No Match" sequence="400" value="fallback_no_match"/>
+                <element inactive_on_update="false" label="Re-assignment - Agent OOO" sequence="300" value="reassign_agent_ooo"/>
+                <element inactive_on_update="false" label="Initial" sequence="100" value="initial"/>
+            </choice>
+        </element>
+        <element label="Assigned Agent" max_length="32" name="assigned_agent" reference="sys_user" type="reference"/>
+        <element label="Reason" mandatory="true" max_length="4000" name="reason" type="string"/>
+        <element label="Incident" mandatory="true" max_length="32" name="incident" reference="incident" type="reference"/>
+        <element label="Assigned Group" mandatory="true" max_length="32" name="assigned_group" reference="sys_user_group" type="reference"/>
+        <index name="index">
+            <element name="assigned_agent"/>
+        </index>
+        <index name="index2">
+            <element name="assigned_group"/>
+        </index>
+        <index name="index3">
+            <element name="incident"/>
+        </index>
+    </element>
+</database>

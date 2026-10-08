@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-05 07:42:49</sys_created_on>
+        <sys_id>9c19c8f4c3bf83d043d978cc0501319e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1921751_incide_0_assignment_log.x_1921751_incide_0.assignment_log_user</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_security_acl display_value="x_1921751_incide_0_assignment_log">d819c8f4c3bf83d043d978cc05013198</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_9c19c8f4c3bf83d043d978cc0501319e</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-05 07:42:49</sys_updated_on>
+        <sys_user_role display_value="x_1921751_incide_0.assignment_log_user" name="x_1921751_incide_0.assignment_log_user">8019c4f4c3bf83d043d978cc050131a1</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

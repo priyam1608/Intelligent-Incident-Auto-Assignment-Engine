@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="61ea3ba4c33f83d043d978cc050131e4" label="Agent Skill" max_length="40" name="x_1921751_incide_0_agent_skill" type="collection">
+        <element choice="1" label="Proficiency" mandatory="true" max_length="40" name="proficiency" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Beginner" sequence="100" value="beginner"/>
+                <element inactive_on_update="false" label="Expert" sequence="300" value="expert"/>
+                <element inactive_on_update="false" label="Intermediate" sequence="200" value="intermediate"/>
+            </choice>
+        </element>
+        <element label="Agent" mandatory="true" max_length="32" name="agent" reference="sys_user" type="reference"/>
+        <element choice="1" label="Category" mandatory="true" max_length="40" name="category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Access Management" sequence="600" value="access_mgmt"/>
+                <element inactive_on_update="false" label="Security" sequence="500" value="security"/>
+                <element inactive_on_update="false" label="Database" sequence="400" value="database"/>
+                <element inactive_on_update="false" label="Network" sequence="100" value="network"/>
+                <element inactive_on_update="false" label="Software" sequence="300" value="software"/>
+                <element inactive_on_update="false" label="Hardware" sequence="200" value="hardware"/>
+            </choice>
+        </element>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <index name="index">
+            <element name="agent"/>
+        </index>
+    </element>
+</database>
