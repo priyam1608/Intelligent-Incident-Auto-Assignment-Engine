@@ -11,15 +11,6 @@
         <name>Agent Availability Fields Validations</name>
         <order/>
         <script><![CDATA[function onSubmit() {
-
-    var start = g_form.getValue('shift_start');
-    var end = g_form.getValue('shift_end');
-
-    if (start && end && start >= end) {
-        g_form.addErrorMessage('Shift Start must be earlier than Shift End.');
-        return false;
-    }
-
     if (parseInt(g_form.getValue('max_concurrent_incidents')) < 0) {
         g_form.addErrorMessage('Max Concurrent Incidents cannot be negative');
         return false;
@@ -33,7 +24,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6f73bb95c3ff0bd043d978cc050131b7</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Agent Availability Fields Validations</sys_name>
         <sys_overrides/>
         <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
@@ -41,7 +32,7 @@
         <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
         <sys_update_name>sys_script_client_6f73bb95c3ff0bd043d978cc050131b7</sys_update_name>
         <sys_updated_by>priyam01</sys_updated_by>
-        <sys_updated_on>2026-10-08 06:38:50</sys_updated_on>
+        <sys_updated_on>2026-10-09 06:12:25</sys_updated_on>
         <table>x_1921751_incide_0_agent_availability</table>
         <type>onSubmit</type>
         <ui_type>10</ui_type>

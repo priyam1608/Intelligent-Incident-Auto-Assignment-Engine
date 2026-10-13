@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <access_method>btree</access_method>
+        <col_name_string>agent,category,proficiency</col_name_string>
+        <index_col_name>705b7be4c33f83d043d978cc050131a6,96ebff28c33f83d043d978cc05013104,51acf3a8c33f83d043d978cc05013113</index_col_name>
+        <logical_table_name>x_1921751_incide_0_agent_skill</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-10-13 06:38:22</sys_created_on>
+        <sys_id>16070557c3f30b1443d978cc05013128</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1921751_incide_0_agent_skill</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sys_index_x_1921751_incide_0_agent_skill_agent_category_proficiency</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-10-13 06:38:22</sys_updated_on>
+        <table display_value="Agent Skill" name="x_1921751_incide_0_agent_skill">61ea3ba4c33f83d043d978cc050131e4</table>
+        <unique_index>true</unique_index>
+    </sys_index>
+</record_update>

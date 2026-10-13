@@ -19,8 +19,10 @@
             </choice>
         </element>
         <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
-        <index name="index">
+        <index name="index" unique="true">
             <element name="agent"/>
+            <element name="category"/>
+            <element name="proficiency"/>
         </index>
     </element>
 </database>
