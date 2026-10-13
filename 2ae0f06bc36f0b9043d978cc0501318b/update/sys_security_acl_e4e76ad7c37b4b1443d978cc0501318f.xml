@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow write for status in x_1921751_incide_0_agent_availability, for users with role x_1921751_incide_0.agent.</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_1921751_incide_0_agent_availability.status</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-13 13:41:59</sys_created_on>
+        <sys_id>e4e76ad7c37b4b1443d978cc0501318f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_1921751_incide_0_agent_availability.status</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sys_security_acl_e4e76ad7c37b4b1443d978cc0501318f</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-13 13:42:00</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

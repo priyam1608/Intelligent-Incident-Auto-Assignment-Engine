@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow read for records in x_1921751_incide_0_agent_availability, for users with role x_1921751_incide_0.agent, and if the ACL script returns true.</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1921751_incide_0_agent_availability</name>
+        <operation display_value="read">read</operation>
+        <script><![CDATA[answer = false;
+
+var agentId = current.getValue('agent');
+var loggedInUserId = gs.getUserID();
+
+if (agentId == loggedInUserId) {
+    answer = true;
+} 
+if (agentId) {
+    var groups = gs.getUser().getMyGroups();
+
+    if (groups && groups.length > 0) {
+        var grUser = new GlideRecord('sys_user_grmember');
+        grUser.addQuery('user', agentId);
+        grUser.addQuery('group', 'IN', groups.join(','));
+        grUser.setLimit(1);
+        grUser.query();
+
+        if (grUser.hasNext()) {
+            answer = true;
+        }
+    }
+}]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-13 10:18:32</sys_created_on>
+        <sys_id>aec0f9dfc33b0b1443d978cc050131c4</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>x_1921751_incide_0_agent_availability</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sys_security_acl_aec0f9dfc33b0b1443d978cc050131c4</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-13 13:33:31</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>
