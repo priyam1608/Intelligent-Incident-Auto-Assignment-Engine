@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_notification">
+    <sys_notification action="DELETE">
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <advanced_event_condition>false</advanced_event_condition>
+        <category display_value="Incident" name="Incident">b8a7d60c4309b510bab01febb7b8f293</category>
+        <condition/>
+        <description/>
+        <event display_value="x_1921751_incide_0.incident.reassigned">2a864c8cc300531043d978cc05013199</event>
+        <event_parm_1>true</event_parm_1>
+        <event_parm_1_table>sys_user</event_parm_1_table>
+        <event_parm_2>true</event_parm_2>
+        <event_parm_2_table>sys_user</event_parm_2_table>
+        <include_originator>true</include_originator>
+        <mandatory>false</mandatory>
+        <name>Reassignment Notice</name>
+        <notification_classifier/>
+        <order>100</order>
+        <recipient_fields/>
+        <recipient_users/>
+        <script><![CDATA[(function runRecipientScript(/*String*/ parm1, /*String*/ parm2) {
+      /*
+      //Create instance of AdvancedNotificationRecipients to add recipients
+      var nr = new sn_notification.AdvancedNotificationRecipients();
+      var sysIds = [];
+      var gr = new GlideRecord('sys_user');
+      gr.addQuery('first_name','IN',parm1);
+      gr.query();
+      while (gr.next()) {
+        sysIds.push(gr.getValue('sys_id'));
+      }
+      nr.addRecipientInfo('sys_user',sysIds);
+      return nr;*/
+      })(parm1,parm2);]]></script>
+        <sys_class_name>sys_notification</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-15 09:53:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9a058848c300531043d978cc0501316a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reassignment Notice</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sys_notification_9a058848c300531043d978cc0501316a</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-15 09:53:09</sys_updated_on>
+        <table>x_1921751_incide_0_assignment_log</table>
+        <triggered_by>event</triggered_by>
+    </sys_notification>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</application>
+        <file_path/>
+        <instance_id>eb7ef7fe1beafd906a85eb9b2d4bcb91</instance_id>
+        <instance_name>dev219002</instance_name>
+        <name>sys_notification_9a058848c300531043d978cc0501316a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_notification"&gt;&lt;sys_notification action="INSERT_OR_UPDATE"&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;advanced_condition/&gt;&lt;advanced_event_condition&gt;false&lt;/advanced_event_condition&gt;&lt;category display_value="Incident" name="Incident"&gt;b8a7d60c4309b510bab01febb7b8f293&lt;/category&gt;&lt;condition/&gt;&lt;description/&gt;&lt;event display_value="x_1921751_incide_0.incident.reassigned"&gt;2a864c8cc300531043d978cc05013199&lt;/event&gt;&lt;event_parm_1&gt;true&lt;/event_parm_1&gt;&lt;event_parm_1_table&gt;sys_user&lt;/event_parm_1_table&gt;&lt;event_parm_2&gt;true&lt;/event_parm_2&gt;&lt;event_parm_2_table&gt;sys_user&lt;/event_parm_2_table&gt;&lt;include_originator&gt;true&lt;/include_originator&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;name&gt;Reassignment Notice&lt;/name&gt;&lt;notification_classifier/&gt;&lt;order&gt;100&lt;/order&gt;&lt;recipient_fields/&gt;&lt;recipient_users/&gt;&lt;script&gt;&lt;![CDATA[(function runRecipientScript(/*String*/ parm1, /*String*/ parm2) {
+      /*
+      //Create instance of AdvancedNotificationRecipients to add recipients
+      var nr = new sn_notification.AdvancedNotificationRecipients();
+      var sysIds = [];
+      var gr = new GlideRecord('sys_user');
+      gr.addQuery('first_name','IN',parm1);
+      gr.query();
+      while (gr.next()) {
+        sysIds.push(gr.getValue('sys_id'));
+      }
+      nr.addRecipientInfo('sys_user',sysIds);
+      return nr;*/
+      })(parm1,parm2);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_notification&lt;/sys_class_name&gt;&lt;sys_created_by&gt;priyam01&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-15 09:53:09&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;9a058848c300531043d978cc0501316a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Reassignment Notice&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0"&gt;2ae0f06bc36f0b9043d978cc0501318b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Incident Auto-Assignment Engine"&gt;2ae0f06bc36f0b9043d978cc0501318b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_notification_9a058848c300531043d978cc0501316a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;priyam01&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-15 09:53:09&lt;/sys_updated_on&gt;&lt;table&gt;x_1921751_incide_0_assignment_log&lt;/table&gt;&lt;triggered_by&gt;event&lt;/triggered_by&gt;&lt;/sys_notification&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>888908907</payload_hash>
+        <record_name>Reassignment Notice</record_name>
+        <reverted_from/>
+        <source>449013fbc333031043d978cc0501315d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-15 09:53:10</sys_created_on>
+        <sys_id>d7c64cccc300531043d978cc050131b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a13efadbac0000001</sys_recorded_at>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-15 09:53:10</sys_updated_on>
+        <type>Notification</type>
+        <update_guid>97c64cccf0005310589df4842ba711b3</update_guid>
+        <update_guid_history>97c64cccf0005310589df4842ba711b3:888908907</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-15 13:06:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_notification">sys_notification</sys_db_object>
+        <sys_id>0aedfe1fc93246cf8ed75ad329454541</sys_id>
+        <sys_metadata>9a058848c300531043d978cc0501316a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reassignment Notice</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_scope_delete display_value="">766a28cb87bb460c81ef427e93ce0069</sys_scope_delete>
+        <sys_update_name>sys_notification_9a058848c300531043d978cc0501316a</sys_update_name>
+        <sys_update_version display_value="sys_notification_9a058848c300531043d978cc0501316a">d7c64cccc300531043d978cc050131b4</sys_update_version>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-15 13:06:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

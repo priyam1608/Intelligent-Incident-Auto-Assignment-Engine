@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>display_reassignment_details</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(current, template, email, email_action, event) {
+
+    function nameOf(id) {
+        if (!id) return 'None';
+        var u = new GlideRecord('sys_user');
+        if (u.get(id)) {
+            return u.getValue('name');
+        }
+        return 'None';
+    }
+
+    var prevAgentName = nameOf(event.parm1);
+    var newAgentName  = nameOf(event.parm2);
+
+    template.print('<tr style="border-bottom: 1px solid #e1e4e8;">');
+    template.print('<td width="35%" style="font-weight: 600; color: #555555;">Previous Assignee:</td>');
+    template.print('<td>' + prevAgentName + '</td>');
+    template.print('</tr>');
+
+    template.print('<tr style="background-color: #f8f9fa; border-bottom: 1px solid #e1e4e8;">');
+    template.print('<td style="font-weight: 600; color: #555555;">New Assignee:</td>');
+    template.print('<td style="font-weight: 600; color: #28a745;">' + newAgentName + '</td>');
+    template.print('</tr>');
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-15 12:47:30</sys_created_on>
+        <sys_id>949ee0c8c348531043d978cc05013183</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>display_reassignment_details</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sys_script_email_949ee0c8c348531043d978cc05013183</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-15 13:02:31</sys_updated_on>
+    </sys_script_email>
+</record_update>

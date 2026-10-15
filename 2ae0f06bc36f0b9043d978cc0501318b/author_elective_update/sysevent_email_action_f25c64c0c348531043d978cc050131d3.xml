@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="DELETE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_1921751_incide_0_assignment_log</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_digest>false</default_digest>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digest_type>single</digest_type>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>x_1921751_incide_0.incident.reassigned</event_name>
+        <event_parm_1>true</event_parm_1>
+        <event_parm_2>true</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p style="margin: 0 0 15px 0;">Hello,</p>
+<p style="margin: 0 0 20px 0;">Please be advised that incident <strong>${number}</strong> has been reassigned.</p>
+<!-- Data Summary Table -->
+<p>${mail_script:display_reassignment_details}</p>
+<table style="border-collapse: collapse; margin-bottom: 25px; font-size: 14px;" border="0" width="100%" cellspacing="0" cellpadding="8">
+<tbody>
+<tr style="background-color: #f8f9fa; border-bottom: 1px solid #e1e4e8;">
+<td style="font-weight: 600; color: #555555;" width="35%">Incident Number:</td>
+<td style="color: #0052cc; font-weight: 600;">${number}</td>
+</tr>
+<!-- SINGLE MAIL SCRIPT INJECTS BOTH ASSIGNEE ROWS HERE -->
+<tr style="border-bottom: 1px solid #e1e4e8;">
+<td style="font-weight: 600; color: #555555;">Priority:</td>
+<td>${priority}</td>
+</tr>
+<tr style="background-color: #f8f9fa; border-bottom: 1px solid #e1e4e8;">
+<td style="font-weight: 600; color: #555555;">Short Description:</td>
+<td>${short_description}</td>
+</tr>
+</tbody>
+</table>
+<!-- Call to Action Button -->
+<table style="margin-bottom: 25px;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="border-radius: 4px;" align="center" bgcolor="#0052cc"><a style="font-size: 14px; font-weight: 600; color: #ffffff; text-decoration: none; padding: 10px 20px; display: inline-block;" href="${mailto:sys_id}" target="_blank" rel="noopener">View Incident Details</a></td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 0; font-size: 13px; color: #666666;">This notification is sent to both the previous and current assignee for tracking and handoff purposes.</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Reassignment Notice</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields/>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Incident Reassignment Notice: ${incident.number}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-15 12:37:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f25c64c0c348531043d978cc050131d3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Reassignment Notice</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sysevent_email_action_f25c64c0c348531043d978cc050131d3</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-15 13:02:54</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="IIAAE Email Template">41329bb3c373031043d978cc050131c7</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+    <sys_es_latest_script action="DELETE">
+        <id>f25c64c0c348531043d978cc050131d3</id>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-15 12:46:49</sys_created_on>
+        <sys_id>c78e24c4c348531043d978cc050131e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-15 12:46:49</sys_updated_on>
+        <table>sysevent_email_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</application>
+        <file_path/>
+        <instance_id>eb7ef7fe1beafd906a85eb9b2d4bcb91</instance_id>
+        <instance_name>dev219002</instance_name>
+        <name>sysevent_email_action_f25c64c0c348531043d978cc050131d3</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_email_action"&gt;&lt;sysevent_email_action action="INSERT_OR_UPDATE"&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;advanced_condition/&gt;&lt;affected_field_on_event/&gt;&lt;category display_value="Uncategorized" name="Uncategorized"&gt;c97d83137f4432005f58108c3ffa917a&lt;/category&gt;&lt;collection&gt;x_1921751_incide_0_assignment_log&lt;/collection&gt;&lt;condition/&gt;&lt;content_type&gt;text/html&lt;/content_type&gt;&lt;default_digest&gt;false&lt;/default_digest&gt;&lt;default_interval/&gt;&lt;description/&gt;&lt;digest_from/&gt;&lt;digest_html/&gt;&lt;digest_reply_to/&gt;&lt;digest_separator_html&gt;&lt;![CDATA[&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;]]&gt;&lt;/digest_separator_html&gt;&lt;digest_separator_text&gt;&lt;![CDATA[\n--------------------------------------------------------------------------------\n]]&gt;&lt;/digest_separator_text&gt;&lt;digest_subject/&gt;&lt;digest_template/&gt;&lt;digest_text/&gt;&lt;digest_type&gt;single&lt;/digest_type&gt;&lt;digestable&gt;false&lt;/digestable&gt;&lt;enable_dynamic_translation&gt;false&lt;/enable_dynamic_translation&gt;&lt;event_name&gt;x_1921751_incide_0.incident.reassigned&lt;/event_name&gt;&lt;event_parm_1&gt;true&lt;/event_parm_1&gt;&lt;event_parm_2&gt;true&lt;/event_parm_2&gt;&lt;exclude_delegates&gt;false&lt;/exclude_delegates&gt;&lt;force_delivery&gt;false&lt;/force_delivery&gt;&lt;from/&gt;&lt;generation_type&gt;event&lt;/generation_type&gt;&lt;importance/&gt;&lt;include_attachments&gt;false&lt;/include_attachments&gt;&lt;item&gt;event.parm1&lt;/item&gt;&lt;item_table/&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;message/&gt;&lt;message_html&gt;&lt;![CDATA[&lt;p style="margin: 0 0 15px 0;"&gt;Hello,&lt;/p&gt;
+&lt;p style="margin: 0 0 20px 0;"&gt;Please be advised that incident &lt;strong&gt;${number}&lt;/strong&gt; has been reassigned.&lt;/p&gt;
+&lt;!-- Data Summary Table --&gt;
+&lt;p&gt;${mail_script:display_reassignment_details}&lt;/p&gt;
+&lt;table style="border-collapse: collapse; margin-bottom: 25px; font-size: 14px;" border="0" width="100%" cellspacing="0" cellpadding="8"&gt;
+&lt;tbody&gt;
+&lt;tr style="background-color: #f8f9fa; border-bottom: 1px solid #e1e4e8;"&gt;
+&lt;td style="font-weight: 600; color: #555555;" width="35%"&gt;Incident Number:&lt;/td&gt;
+&lt;td style="color: #0052cc; font-weight: 600;"&gt;${number}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;!-- SINGLE MAIL SCRIPT INJECTS BOTH ASSIGNEE ROWS HERE --&gt;
+&lt;tr style="border-bottom: 1px solid #e1e4e8;"&gt;
+&lt;td style="font-weight: 600; color: #555555;"&gt;Priority:&lt;/td&gt;
+&lt;td&gt;${priority}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="background-color: #f8f9fa; border-bottom: 1px solid #e1e4e8;"&gt;
+&lt;td style="font-weight: 600; color: #555555;"&gt;Short Description:&lt;/td&gt;
+&lt;td&gt;${short_description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;!-- Call to Action Button --&gt;
+&lt;table style="margin-bottom: 25px;" border="0" cellspacing="0" cellpadding="0"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="border-radius: 4px;" align="center" bgcolor="#0052cc"&gt;&lt;a style="font-size: 14px; font-weight: 600; color: #ffffff; text-decoration: none; padding: 10px 20px; display: inline-block;" href="${mailto:sys_id}" target="_blank" rel="noopener"&gt;View Incident Details&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p style="margin: 0; font-size: 13px; color: #666666;"&gt;This notification is sent to both the previous and current assignee for tracking and handoff purposes.&lt;/p&gt;]]&gt;&lt;/message_html&gt;&lt;message_list/&gt;&lt;message_text/&gt;&lt;name&gt;Reassignment Notice&lt;/name&gt;&lt;omit_watermark&gt;false&lt;/omit_watermark&gt;&lt;order&gt;100&lt;/order&gt;&lt;push_message_only&gt;false&lt;/push_message_only&gt;&lt;recipient_fields/&gt;&lt;recipient_groups/&gt;&lt;recipient_users/&gt;&lt;reply_to/&gt;&lt;send_self&gt;true&lt;/send_self&gt;&lt;sms_alternate/&gt;&lt;style/&gt;&lt;subject&gt;Incident Reassignment Notice: ${incident.number}&lt;/subject&gt;&lt;subscribable&gt;false&lt;/subscribable&gt;&lt;sys_class_name&gt;sysevent_email_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;priyam01&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-15 12:37:44&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;f25c64c0c348531043d978cc050131d3&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Reassignment Notice&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0"&gt;2ae0f06bc36f0b9043d978cc0501318b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Incident Auto-Assignment Engine"&gt;2ae0f06bc36f0b9043d978cc0501318b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_email_action_f25c64c0c348531043d978cc050131d3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;priyam01&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-15 13:02:54&lt;/sys_updated_on&gt;&lt;sys_version&gt;2&lt;/sys_version&gt;&lt;template display_value="IIAAE Email Template"&gt;41329bb3c373031043d978cc050131c7&lt;/template&gt;&lt;type&gt;email&lt;/type&gt;&lt;weight&gt;0&lt;/weight&gt;&lt;/sysevent_email_action&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;f25c64c0c348531043d978cc050131d3&lt;/id&gt;&lt;sys_created_by&gt;priyam01&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-15 12:46:49&lt;/sys_created_on&gt;&lt;sys_id&gt;c78e24c4c348531043d978cc050131e3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;priyam01&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-15 12:46:49&lt;/sys_updated_on&gt;&lt;table&gt;sysevent_email_action&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>598908274</payload_hash>
+        <record_name>Reassignment Notice</record_name>
+        <reverted_from/>
+        <source>449013fbc333031043d978cc0501315d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-15 13:02:54</sys_created_on>
+        <sys_id>3e32f008c388531043d978cc050131e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a13fa892ca0000001</sys_recorded_at>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-15 13:02:54</sys_updated_on>
+        <type>Notification</type>
+        <update_guid>7a32f008ee885310eb050ea8f73475e2</update_guid>
+        <update_guid_history>7a32f008ee885310eb050ea8f73475e2:598908274,82f034c0d2885310f04800463645c5a6:1818625312,174fe84c2c4853105ea37b71b2527086:-1737416732,4e7c2004f4485310d590a6b99c6cf00f:507189457</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-15 13:04:36</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_email_action">sysevent_email_action</sys_db_object>
+        <sys_id>04c0a4c1a04144c4bf5ffe0d5f785fe1</sys_id>
+        <sys_metadata>f25c64c0c348531043d978cc050131d3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reassignment Notice</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_parent display_value="Assignment Log">bae844f4c3bf83d043d978cc0501319d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_scope_delete display_value="">766a28cb87bb460c81ef427e93ce0069</sys_scope_delete>
+        <sys_update_name>sysevent_email_action_f25c64c0c348531043d978cc050131d3</sys_update_name>
+        <sys_update_version display_value="sysevent_email_action_f25c64c0c348531043d978cc050131d3">3e32f008c388531043d978cc050131e3</sys_update_version>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-15 13:04:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
