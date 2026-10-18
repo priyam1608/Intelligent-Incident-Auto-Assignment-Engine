@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($sce) {
+    var c = this;
+    c.src = $sce.trustAsResourceUrl(c.data.url);
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>team-load-dashboard</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Team Load Dashboard</name>
+        <option_schema>[&#13;
+  {"name": "dashboard_url", "label": "Dashboard URL (path only)", "type": "string"},&#13;
+  {"name": "height", "label": "Height (e.g. 85vh or 700px)", "type": "string", "default_value": "85vh"}&#13;
+]</option_schema>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    // Paste the path from your address bar, without the instance hostname
+    data.url = options.dashboard_url || '/now/platform-analytics-workspace/dashboards/params/edit/false/sys-id/7b48784cc3c8531043d978cc050131d7';
+    data.height = options.height || '85vh';
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-16 10:39:53</sys_created_on>
+        <sys_id>74fa915cc388571043d978cc05013114</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Team Load Dashboard</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sp_widget_74fa915cc388571043d978cc05013114</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-16 10:52:04</sys_updated_on>
+        <template><![CDATA[<iframe ng-src="{{c.src}}"
+        style="width:100%; height:{{c.data.height}}; border:0;"
+        title="Dashboard">
+</iframe>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</application>
+        <file_path/>
+        <instance_id>eb7ef7fe1beafd906a85eb9b2d4bcb91</instance_id>
+        <instance_name>dev219002</instance_name>
+        <name>sp_widget_74fa915cc388571043d978cc05013114</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller = function($sce) {
+    var c = this;
+    c.src = $sce.trustAsResourceUrl(c.data.url);
+};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css/&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;team-load-dashboard&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]&gt;&lt;/link&gt;&lt;name&gt;Team Load Dashboard&lt;/name&gt;&lt;option_schema&gt;[&amp;#13;
+  {"name": "dashboard_url", "label": "Dashboard URL (path only)", "type": "string"},&amp;#13;
+  {"name": "height", "label": "Height (e.g. 85vh or 700px)", "type": "string", "default_value": "85vh"}&amp;#13;
+]&lt;/option_schema&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+    // Paste the path from your address bar, without the instance hostname
+    data.url = options.dashboard_url || '/now/platform-analytics-workspace/dashboards/params/edit/false/sys-id/7b48784cc3c8531043d978cc050131d7';
+    data.height = options.height || '85vh';
+})();
+]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;priyam01&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-16 10:39:53&lt;/sys_created_on&gt;&lt;sys_id&gt;74fa915cc388571043d978cc05013114&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;Team Load Dashboard&lt;/sys_name&gt;&lt;sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0"&gt;2ae0f06bc36f0b9043d978cc0501318b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Incident Auto-Assignment Engine"&gt;2ae0f06bc36f0b9043d978cc0501318b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_74fa915cc388571043d978cc05013114&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;priyam01&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-16 10:52:04&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;iframe ng-src="{{c.src}}"
+        style="width:100%; height:{{c.data.height}}; border:0;"
+        title="Dashboard"&gt;
+&lt;/iframe&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1078415877</payload_hash>
+        <record_name>Team Load Dashboard</record_name>
+        <reverted_from/>
+        <source>a318f804c3c8531043d978cc0501317e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-16 10:52:04</sys_created_on>
+        <sys_id>88ed9d94c3c8571043d978cc050131df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a14457270b0000001</sys_recorded_at>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-16 10:52:04</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>c4ed9d94ebc85710dcd50f4fcd58f0de</update_guid>
+        <update_guid_history>c4ed9d94ebc85710dcd50f4fcd58f0de:-1078415877,99bd9994abc857104a17b7806df3f927:-445297031,445d155475c857105b9af227d5d79783:1778818767,0f6b1d9cd68857104e057fb51dd20a9e:-1794962380,ad1b595c5d88571029b2ea842de578ab:129001426</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Team Load Dashboard">520025dcc3c8571043d978cc0501316e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-16 11:01:31</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>094417d7b8974e33813f67ada971a9e9</sys_id>
+        <sys_metadata>74fa915cc388571043d978cc05013114</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Team Load Dashboard</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_scope_delete display_value="">766a28cb87bb460c81ef427e93ce0069</sys_scope_delete>
+        <sys_update_name>sp_widget_74fa915cc388571043d978cc05013114</sys_update_name>
+        <sys_update_version display_value="sp_widget_74fa915cc388571043d978cc05013114">88ed9d94c3c8571043d978cc050131df</sys_update_version>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:01:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <aria_label/>
+        <class_name/>
+        <order>1</order>
+        <semantic_tag/>
+        <size>9</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">5d1a2590c38c571043d978cc05013180</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-16 11:45:24</sys_created_on>
+        <sys_id>9d1a2590c38c571043d978cc05013184</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sp_column_9d1a2590c38c571043d978cc05013184</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:45:24</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</application>
+        <file_path/>
+        <instance_id>eb7ef7fe1beafd906a85eb9b2d4bcb91</instance_id>
+        <instance_name>dev219002</instance_name>
+        <name>sp_column_9d1a2590c38c571043d978cc05013184</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><aria_label/><class_name/><order>1</order><semantic_tag/><size>9</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">5d1a2590c38c571043d978cc05013180</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>priyam01</sys_created_by><sys_created_on>2026-10-16 11:45:24</sys_created_on><sys_id>9d1a2590c38c571043d978cc05013184</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package><sys_policy/><sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope><sys_update_name>sp_column_9d1a2590c38c571043d978cc05013184</sys_update_name><sys_updated_by>priyam01</sys_updated_by><sys_updated_on>2026-10-16 11:45:24</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>-1058310877</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>a318f804c3c8531043d978cc0501317e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-16 11:45:24</sys_created_on>
+        <sys_id>dd1a2990c38c571043d978cc05013183</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a14487fa5b0000001</sys_recorded_at>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:45:24</sys_updated_on>
+        <type>Column</type>
+        <update_guid>9d1a2990538c57105558283b49132082</update_guid>
+        <update_guid_history>9d1a2990538c57105558283b49132082:-1058310877</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">394ae1d0c38c571043d978cc050131ee</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-16 11:46:16</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>435b1432a4f7453895f5b6a09ec58df1</sys_id>
+        <sys_metadata>9d1a2590c38c571043d978cc05013184</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_scope_delete display_value="">766a28cb87bb460c81ef427e93ce0069</sys_scope_delete>
+        <sys_update_name>sp_column_9d1a2590c38c571043d978cc05013184</sys_update_name>
+        <sys_update_version display_value="sp_column_9d1a2590c38c571043d978cc05013184">dd1a2990c38c571043d978cc05013183</sys_update_version>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:46:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

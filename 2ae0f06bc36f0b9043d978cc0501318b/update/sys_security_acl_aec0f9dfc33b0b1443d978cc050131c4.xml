@@ -13,12 +13,14 @@
         <operation display_value="read">read</operation>
         <script><![CDATA[answer = false;
 
+var EXCLUDED_GROUP = '5ee74940b70022108d4406dd1e11a918';
+
 var agentId = current.getValue('agent');
 var loggedInUserId = gs.getUserID();
 
 if (agentId == loggedInUserId) {
     answer = true;
-} 
+}
 if (agentId) {
     var groups = gs.getUser().getMyGroups();
 
@@ -26,6 +28,7 @@ if (agentId) {
         var grUser = new GlideRecord('sys_user_grmember');
         grUser.addQuery('user', agentId);
         grUser.addQuery('group', 'IN', groups.join(','));
+        grUser.addQuery('group', '!=', EXCLUDED_GROUP);
         grUser.setLimit(1);
         grUser.query();
 
@@ -39,14 +42,14 @@ if (agentId) {
         <sys_created_by>priyam01</sys_created_by>
         <sys_created_on>2026-10-13 10:18:32</sys_created_on>
         <sys_id>aec0f9dfc33b0b1443d978cc050131c4</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>x_1921751_incide_0_agent_availability</sys_name>
         <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
         <sys_update_name>sys_security_acl_aec0f9dfc33b0b1443d978cc050131c4</sys_update_name>
         <sys_updated_by>priyam01</sys_updated_by>
-        <sys_updated_on>2026-10-13 13:33:31</sys_updated_on>
+        <sys_updated_on>2026-10-17 13:06:00</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>

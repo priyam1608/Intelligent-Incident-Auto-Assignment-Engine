@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="DELETE">
+        <sp_dependency display_value="ReportingIncludes">d1b923de9f0222008252baac757fcfe4</sp_dependency>
+        <sp_widget display_value="Team Load Report Dashboard">f4d8ed5cc34c571043d978cc05013134</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-16 11:39:55</sys_created_on>
+        <sys_id>70d8ed5cc34c571043d978cc05013139</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ReportingIncludes.Team Load Report Dashboard</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_70d8ed5cc34c571043d978cc05013139</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:39:55</sys_updated_on>
+    </m2m_sp_widget_dependency>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</application>
+        <file_path/>
+        <instance_id>eb7ef7fe1beafd906a85eb9b2d4bcb91</instance_id>
+        <instance_name>dev219002</instance_name>
+        <name>m2m_sp_widget_dependency_70d8ed5cc34c571043d978cc05013139</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency"><m2m_sp_widget_dependency action="INSERT_OR_UPDATE"><sp_dependency display_value="ReportingIncludes">d1b923de9f0222008252baac757fcfe4</sp_dependency><sp_widget display_value="Team Load Report Dashboard">f4d8ed5cc34c571043d978cc05013134</sp_widget><sys_class_name>m2m_sp_widget_dependency</sys_class_name><sys_created_by>priyam01</sys_created_by><sys_created_on>2026-10-16 11:39:55</sys_created_on><sys_id>70d8ed5cc34c571043d978cc05013139</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ReportingIncludes.Team Load Report Dashboard</sys_name><sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package><sys_policy/><sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope><sys_update_name>m2m_sp_widget_dependency_70d8ed5cc34c571043d978cc05013139</sys_update_name><sys_updated_by>priyam01</sys_updated_by><sys_updated_on>2026-10-16 11:39:55</sys_updated_on></m2m_sp_widget_dependency></record_update>]]></payload>
+        <payload_hash>2119732963</payload_hash>
+        <record_name>ReportingIncludes.Team Load Report Dashboard</record_name>
+        <reverted_from/>
+        <source>a318f804c3c8531043d978cc0501317e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-16 11:39:55</sys_created_on>
+        <sys_id>7cd8ed5cc34c571043d978cc0501313c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a14482f5b00000001</sys_recorded_at>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:39:55</sys_updated_on>
+        <type>Widget Dependency</type>
+        <update_guid>f8d8ed5cf44c571049e4761b1feb603b</update_guid>
+        <update_guid_history>f8d8ed5cf44c571049e4761b1feb603b:2119732963</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="ReportingIncludes.Team Load Report Dashboard">48eaa554c38c571043d978cc05013177</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-16 11:48:52</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_widget_dependency">m2m_sp_widget_dependency</sys_db_object>
+        <sys_id>1505cb863e5548409ee06a9bf56ded44</sys_id>
+        <sys_metadata>70d8ed5cc34c571043d978cc05013139</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ReportingIncludes.Team Load Report Dashboard</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_scope_delete display_value="">766a28cb87bb460c81ef427e93ce0069</sys_scope_delete>
+        <sys_update_name>m2m_sp_widget_dependency_70d8ed5cc34c571043d978cc05013139</sys_update_name>
+        <sys_update_version display_value="m2m_sp_widget_dependency_70d8ed5cc34c571043d978cc05013139">7cd8ed5cc34c571043d978cc0501313c</sys_update_version>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-16 11:48:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

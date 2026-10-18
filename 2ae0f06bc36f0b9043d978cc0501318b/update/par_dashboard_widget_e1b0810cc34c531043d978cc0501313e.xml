@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="INSERT_OR_UPDATE">
+        <canvas display_value="">cc58bc4cc3c8531043d978cc0501314e</canvas>
+        <component display_value="List">7ff373544303121093711347efb8f23c</component>
+        <component_props>{"metrics":[{"dataSource":"dGFibGV4XzE5MjE3NTFfaW5jaWRlXzBfYWdlbnRfYXZhaWxhYmlsaXR5MTc5MjA3NDE0Njk4NA==","id":"ZEdGaWJHVjRYekU1TWpFM05URmZhVzVqYVdSbFh6QmZZV2RsYm5SZllYWmhhV3hoWW1sc2FYUjVNVGM1TWpBM05ERTBOams0TkE9PTE3OTIwNzQxNDc2MzU=","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"showHeader":true,"wrapTitle":true,"showLoadingIndicator":false,"showHeaderSeparator":true,"headingLevel":2,"limit":10,"columnLimit":0,"maxCharLimit":40,"showPersonalization":false,"hideDotwalk":false,"showColumnReorder":true,"showColumnGrouping":true,"showColumnResizing":true,"showColumnFiltering":false,"showColumnSorting":true,"dataCategory":"group","allowAdditionalGroupByPerMetric":false,"sortByOrder":"desc","followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableCustomEmptyState":false,"componentId":"faj4d61y","emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateHeadingLevel":3,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","filterConfigurations":"@state.parFilters","columns":"agent,shift_start,shift_end,timezone","table":"x_1921751_incide_0_agent_availability","showLinks":true,"wrapCellContent":"useLineBreaksUserPref","showViewAll":false,"showInlineEditing":true,"allowListPagination":true,"lineClamp":1,"headerTitleAlignment":"start","headerTitle":"Agent Shifts Availability","showBorder":true,"showExportOption":true,"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Agent Availability","sourceType":"table","tableOrViewName":"x_1921751_incide_0_agent_availability","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzE5MjE3NTFfaW5jaWRlXzBfYWdlbnRfYXZhaWxhYmlsaXR5MTc5MjA3NDE0Njk4NA==","dataCategories":["trend","group","simple"]}],"bareBorder":false,"showAdditionalGroupBySelector":false}</component_props>
+        <h>13</h>
+        <name/>
+        <required_translations>[{"comment":"","message":"No data available.","code":"PAR_DASHBOARD.cc58bc4cc3c8531043d978cc0501314e.e1b0810cc34c531043d978cc0501313e"},{"comment":"","message":"There are no scores available for the selected criteria. Contact your admin for more info.","code":"PAR_DASHBOARD.cc58bc4cc3c8531043d978cc0501314e.e1b0810cc34c531043d978cc0501313e"},{"comment":"","message":"Agent Shifts Availability","code":"PAR_DASHBOARD.cc58bc4cc3c8531043d978cc0501314e.e1b0810cc34c531043d978cc0501313e"},{"comment":"","message":"Agent Availability","code":"PAR_DASHBOARD.cc58bc4cc3c8531043d978cc0501314e.e1b0810cc34c531043d978cc0501313e"}]</required_translations>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-15 14:06:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e1b0810cc34c531043d978cc0501313e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>par_dashboard_widget_e1b0810cc34c531043d978cc0501313e</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-16 10:36:28</sys_updated_on>
+        <visualization/>
+        <w>48</w>
+        <widget_props/>
+        <x>0</x>
+        <y>29</y>
+    </par_dashboard_widget>
+</record_update>

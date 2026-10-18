@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.text-widget-container {
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e1e4e8;
+}
+
+.text-widget-container .panel-heading {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e1e4e8;
+    color: #333333;
+    font-weight: 600;
+}
+
+.text-widget-container .panel-body {
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444444;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>iiaae_heading</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>IIAAE Heading</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-16 13:40:39</sys_created_on>
+        <sys_id>a5748a90c304971043d978cc05013191</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>IIAAE Heading</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sp_widget_a5748a90c304971043d978cc05013191</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-16 13:44:23</sys_updated_on>
+        <template><![CDATA[<div style="padding: 20px 0; border-bottom: 2px solid #0052cc; margin-bottom: 30px;">
+    <h1 style="margin: 0 0 10px 0; font-size: 28px; font-weight: 700; color: #172b4d;">Incident Auto - Assignment &amp; Availability Engine</h1>
+    <p style="margin: 0; font-size: 16px; color: #5e6c84;">Automated routing, shift management, and dynamic capacity tracking operations center.</p>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>a5748a90c304971043d978cc05013191</id>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-16 13:40:39</sys_created_on>
+        <sys_id>61748e90c304971043d978cc050131ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-16 13:40:39</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
