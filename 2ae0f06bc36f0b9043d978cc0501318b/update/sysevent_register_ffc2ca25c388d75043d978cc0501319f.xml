@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <derived_priority>100</derived_priority>
+        <description/>
+        <event_name>x_1921751_incide_0.slack_chat_notify</event_name>
+        <fired_by/>
+        <priority>100</priority>
+        <queue/>
+        <suffix>slack_chat_notify</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-20 10:46:21</sys_created_on>
+        <sys_id>ffc2ca25c388d75043d978cc0501319f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_1921751_incide_0.slack_chat_notify</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sysevent_register_ffc2ca25c388d75043d978cc0501319f</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-20 10:56:57</sys_updated_on>
+        <table>x_1921751_incide_0_assignment_log</table>
+    </sysevent_register>
+</record_update>

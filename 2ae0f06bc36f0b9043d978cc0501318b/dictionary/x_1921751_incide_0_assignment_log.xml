@@ -3,11 +3,11 @@
         <element default="javascript:new GlideDateTime();" label="Timestamp" max_length="40" name="timestamp" read_only="true" read_only_option="display_read_only" type="glide_date_time"/>
         <element choice="1" label="Assignment Type" mandatory="true" max_length="40" name="assignment_type" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Initial" sequence="100" value="initial"/>
                 <element inactive_on_update="false" label="P1 Override" sequence="500" value="p1_override"/>
-                <element inactive_on_update="false" label="Re-assignment - SLA Risk" sequence="200" value="reassign_sla_risk"/>
                 <element inactive_on_update="false" label="Fallback - No Match" sequence="400" value="fallback_no_match"/>
                 <element inactive_on_update="false" label="Re-assignment - Agent OOO" sequence="300" value="reassign_agent_ooo"/>
-                <element inactive_on_update="false" label="Initial" sequence="100" value="initial"/>
+                <element inactive_on_update="false" label="Re-assignment - SLA Risk" sequence="200" value="reassign_sla_risk"/>
             </choice>
         </element>
         <element label="Assigned Agent" max_length="32" name="assigned_agent" reference="sys_user" type="reference"/>

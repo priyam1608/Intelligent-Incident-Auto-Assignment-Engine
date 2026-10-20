@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_in_email_action">
+    <sysevent_in_email_action action="INSERT_OR_UPDATE">
+        <action>record_action</action>
+        <active>true</active>
+        <assignment_operator/>
+        <condition_script/>
+        <description/>
+        <event_name>email.read</event_name>
+        <filter_condition/>
+        <from/>
+        <name>Create Incident from Email</name>
+        <order>100</order>
+        <reply_email/>
+        <required_roles/>
+        <script><![CDATA[(function runAction( /*GlideRecord*/ current, /*GlideRecord*/ event, /*EmailWrapper*/ email, /*ScopedEmailLogger*/ logger, /*EmailClassifier*/ classifier) {
+
+    var DEFAULT_CATEGORY = 'inquiry';   
+    var DEFAULT_LEVEL = '3';           
+
+    var categories = ["hardware", "software", "database", "network"];
+    var urgencyAndImpactMap = {
+        1: ['high', 'highest', 'maximum', 'higher', 'critical', '1 - high', '1-high'],
+        2: ['medium', 'moderate', 'average', '2-moderate', '2 - moderate'],
+        3: ['low', 'lower', 'fewer', 'minimum', '3-low', '3 - low']
+    };
+
+    var shortDescription = (email.subject || '').trim();
+    var description = email.body_text || '';
+    var lines = description.split('\n');
+
+    var levelLookup = {};
+    for (var lvl in urgencyAndImpactMap) {
+        levelLookup[lvl] = lvl;
+        urgencyAndImpactMap[lvl].forEach(function(word) {
+            levelLookup[word] = lvl;
+        });
+    }
+
+    function readLine(label) {
+        for (var i = 0; i < lines.length; i++) {
+            var text = lines[i].trim().toLowerCase();
+            if (text.indexOf(label) != 0) continue;
+            var rest = text.substring(label.length).trim();
+            var sep = rest.charAt(0);
+            if (sep == ':' || sep == '-' || sep == '=')
+                return rest.substring(1).split(' ').filter(function(w) { return w; }).join(' ');
+        }
+        return '';
+    }
+
+    function toLevel(value) {
+        return levelLookup[value] || levelLookup[value.split(' ')[0]] || '';
+    }
+
+    // ---------- caller ----------
+    var callerId = '';
+    var u = new GlideRecord('sys_user');
+    u.addQuery('email', email.origemail);
+    u.addActiveQuery();
+    u.setLimit(1);
+    u.query();
+    if (u.next()) callerId = u.getUniqueValue();
+
+    // ---------- category / impact / urgency ----------
+    var category = readLine('category').split(' ')[0];
+    if (categories.indexOf(category) == -1)
+        category = DEFAULT_CATEGORY;
+
+    var impact = toLevel(readLine('impact')) || DEFAULT_LEVEL;
+    var urgency = toLevel(readLine('urgency')) || DEFAULT_LEVEL;
+
+    // Unknown senders can't self-declare High (delete this block if you don't want the cap)
+    if (!callerId) {
+        if (impact == '1') impact = '2';
+        if (urgency == '1') urgency = '2';
+    }
+
+    // ---------- create the incident ----------
+    current.short_description = shortDescription;
+    current.description = description;
+    current.contact_type = 'email';
+    current.category = category;
+    current.impact = impact;
+    current.urgency = urgency;
+    if (callerId) current.caller_id = callerId;
+
+    current.insert();
+
+})(current, event, email, logger, classifier);]]></script>
+        <stop_processing>true</stop_processing>
+        <sys_class_name>sysevent_in_email_action</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-19 11:42:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b648e85dc38c935043d978cc050131da</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Create Incident from Email</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sysevent_in_email_action_b648e85dc38c935043d978cc050131da</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-19 13:31:43</sys_updated_on>
+        <table>incident</table>
+        <template/>
+        <type>new</type>
+    </sysevent_in_email_action>
+</record_update>

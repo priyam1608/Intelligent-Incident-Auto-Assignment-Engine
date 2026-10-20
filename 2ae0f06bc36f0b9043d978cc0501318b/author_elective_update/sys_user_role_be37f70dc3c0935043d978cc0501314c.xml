@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <federated_id/>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_1921751_incide_0.integration_user_role</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>integration_user_role</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-19 05:58:07</sys_created_on>
+        <sys_id>be37f70dc3c0935043d978cc0501314c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1921751_incide_0.integration_user_role</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sys_user_role_be37f70dc3c0935043d978cc0501314c</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-19 05:58:07</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</application>
+        <file_path/>
+        <instance_id>eb7ef7fe1beafd906a85eb9b2d4bcb91</instance_id>
+        <instance_name>dev219002</instance_name>
+        <name>sys_user_role_be37f70dc3c0935043d978cc0501314c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description/><elevated_privilege>false</elevated_privilege><federated_id/><grantable>true</grantable><includes_roles/><name>x_1921751_incide_0.integration_user_role</name><scoped_admin>false</scoped_admin><suffix>integration_user_role</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>priyam01</sys_created_by><sys_created_on>2026-10-19 05:58:07</sys_created_on><sys_id>be37f70dc3c0935043d978cc0501314c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1921751_incide_0.integration_user_role</sys_name><sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package><sys_policy/><sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope><sys_update_name>sys_user_role_be37f70dc3c0935043d978cc0501314c</sys_update_name><sys_updated_by>priyam01</sys_updated_by><sys_updated_on>2026-10-19 05:58:07</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>-320957291</payload_hash>
+        <record_name>x_1921751_incide_0.integration_user_role</record_name>
+        <reverted_from/>
+        <source>ae8e437cc3c09f1043d978cc0501318c</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-19 05:58:07</sys_created_on>
+        <sys_id>1f57bf0dc3c0935043d978cc0501316d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a152bd1c150000001</sys_recorded_at>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-19 05:58:07</sys_updated_on>
+        <type>Role</type>
+        <update_guid>db57bf0daac0935062a83778aee9d76c</update_guid>
+        <update_guid_history>db57bf0daac0935062a83778aee9d76c:-320957291</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1921751_incide_0.integration_user_role">dd1488d9c384935043d978cc05013142</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-19 06:53:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>73afe2bf7b034735b77e887815da6009</sys_id>
+        <sys_metadata>be37f70dc3c0935043d978cc0501314c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1921751_incide_0.integration_user_role</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_scope_delete display_value="">766a28cb87bb460c81ef427e93ce0069</sys_scope_delete>
+        <sys_update_name>sys_user_role_be37f70dc3c0935043d978cc0501314c</sys_update_name>
+        <sys_update_version display_value="sys_user_role_be37f70dc3c0935043d978cc0501314c">1f57bf0dc3c0935043d978cc0501316d</sys_update_version>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-19 06:53:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

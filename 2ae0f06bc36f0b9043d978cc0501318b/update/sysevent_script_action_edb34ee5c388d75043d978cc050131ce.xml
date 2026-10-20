@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_1921751_incide_0.slack_chat_notify</event_name>
+        <name>Slack Chat Notification Script Action</name>
+        <order>100</order>
+        <script><![CDATA[var url = gs.getProperty('slack_webhook_url');
+if (!url) gs.warn('Agent Chat Notification: webhook URL property is empty');
+
+var inc = current.incident.getRefRecord();
+var assigned_agent = current.getDisplayValue('assigned_agent');
+var assignment_type = current.getDisplayValue('assignment_type');
+var assigned_group = current.getDisplayValue('assigned_group');
+var reason = current.getDisplayValue('reason');
+var timestamp = current.getDisplayValue('timestamp');
+
+var message = inc.getDisplayValue('number') + " - " + inc.getDisplayValue('short_description') + " is assigned to " + assigned_agent + " belongs to " + assigned_group + " group with a assignment type = " + assignment_type + " Because " + reason + " [" + timestamp + "]";
+
+try {
+    var r = new sn_ws.RESTMessageV2();
+    r.setEndpoint(url);
+    r.setHttpTimeout(10000);
+    r.setHttpMethod("post");
+    r.setRequestHeader("Content-Type", "Application/json");
+    r.setRequestBody(JSON.stringify({
+        "text": message
+    }));
+    var res = r.execute();
+    var code = res.getStatusCode();
+    if (code != 200) gs.warn('Agent Chat Notification failed: HTTP ' + code + ' ' + res.getBody());
+} catch (e) {
+    gs.warn('Agent Chat Notification error: ' + e);
+}]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-20 10:50:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>edb34ee5c388d75043d978cc050131ce</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Slack Chat Notification Script Action</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sysevent_script_action_edb34ee5c388d75043d978cc050131ce</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-20 12:03:31</sys_updated_on>
+    </sysevent_script_action>
+</record_update>

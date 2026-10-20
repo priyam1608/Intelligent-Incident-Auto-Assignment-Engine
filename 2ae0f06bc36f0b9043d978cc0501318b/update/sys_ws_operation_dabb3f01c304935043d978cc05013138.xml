@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>POST</http_method>
+        <name>Create Incident</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var body = request.body.data;
+    if (!body || typeof body != 'object') return new sn_ws_err.BadRequestError('Request body must be a JSON object');
+
+    // ---------- helpers ----------
+    function clean(v) {
+        return (v == undefined || v == null) ? '' : String(v).trim();
+    }
+
+    // Active choice values for a field 
+    function getChoices(field, dependent) {
+        var vals = [];
+        var ch = new GlideRecord('sys_choice');
+        ch.addQuery('name', 'IN', 'incident,task');
+        ch.addQuery('element', field);
+        ch.addQuery('inactive', false);
+        if (dependent) ch.addQuery('dependent_value', dependent);
+        ch.query();
+        while (ch.next()) {
+            var v = ch.getValue('value');
+            if (vals.indexOf(v) == -1) vals.push(v);
+        }
+        return vals;
+    }
+
+    function matchChoice(list, input) {
+        for (var i = 0; i < list.length; i++) {
+            if (list[i].toLowerCase() == input.toLowerCase()) return list[i];
+        }
+        return '';
+    }
+
+    // ---------- read input ----------
+    var shortDesc = clean(body.short_description);
+    var desc = clean(body.description);
+    var category = clean(body.category);
+    var subcategory = clean(body.subcategory);
+    var impact = clean(body.impact);
+    var urgency = clean(body.urgency);
+    var callerEmail = clean(body.caller_email);
+
+    var errors = [];
+
+    // ---------- required fields ----------
+    if (!shortDesc) errors.push('short_description is required');
+    if (!category) errors.push('category is required');
+    if (!impact) errors.push('impact is required');
+    if (!urgency) errors.push('urgency is required');
+
+    // ---------- choice validation ----------
+    if (category) {
+        var categoryList = getChoices('category');
+        var validCategory = matchChoice(categoryList, category);
+        if (!validCategory) {
+            errors.push("Invalid category '" + category + "'. Allowed: " + categoryList.join(', '));
+        } else {
+            category = validCategory;
+
+            if (subcategory) {
+                var subs = getChoices('subcategory', category);
+                var validSub = matchChoice(subs, subcategory);
+                if (!validSub) errors.push("Invalid subcategory '" + subcategory + "' for category '" + category + "'. Allowed: " + subs.join(', '));
+                else subcategory = validSub;
+            }
+        }
+    }
+
+    if (impact) {
+        var impactList = getChoices('impact');
+        var validImpact = matchChoice(impactList, impact);
+        if (!validImpact) errors.push("Invalid impact '" + impact + "'. Allowed: " + impactList.join(', '));
+        else impact = validImpact;
+    }
+
+    if (urgency) {
+        var urgencyList = getChoices('urgency');
+        var validUrgency = matchChoice(urgencyList, urgency);
+        if (!validUrgency) errors.push("Invalid urgency '" + urgency + "'. Allowed: " + urgencyList.join(', '));
+        else urgency = validUrgency;
+    }
+
+    // ---------- caller ----------
+    var callerId = '';
+    if (callerEmail) {
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(callerEmail)) {
+            errors.push('caller_email is not a valid email address');
+        } else {
+            var u = new GlideRecord('sys_user');
+            u.addQuery('email', callerEmail);
+            u.addActiveQuery();
+            u.setLimit(1);
+            u.query();
+            if (u.next()) callerId = u.getUniqueValue();
+            else errors.push("No active user found for caller_email '" + callerEmail + "'");
+        }
+    }
+
+    if (errors.length > 0) return new sn_ws_err.BadRequestError(errors.join('; '));
+
+    // ---------- create the incident ----------
+    var inc = new GlideRecord('incident');
+    inc.initialize();
+    inc.short_description = shortDesc;
+    inc.description = desc;
+    inc.category = category;
+    inc.subcategory = subcategory;
+    inc.impact = impact;
+    inc.urgency = urgency;
+    inc.contact_type = 'self-service';
+    if (callerId) inc.caller_id = callerId;
+
+    var sysId = inc.insert();
+    if (!sysId) return new sn_ws_err.InternalServerError('Incident could not be created');
+
+    response.setStatus(201);
+    return {
+        result: {
+            number: inc.getValue('number'),
+            sys_id: sysId
+        }
+    };
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1921751_incide_0/monitoring_alert_intake/create-incident</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/create-incident</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <support_trailing_slash>false</support_trailing_slash>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>priyam01</sys_created_by>
+        <sys_created_on>2026-10-19 06:45:20</sys_created_on>
+        <sys_id>dabb3f01c304935043d978cc05013138</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Create Incident</sys_name>
+        <sys_package display_value="Incident Auto-Assignment Engine" source="x_1921751_incide_0">2ae0f06bc36f0b9043d978cc0501318b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Incident Auto-Assignment Engine">2ae0f06bc36f0b9043d978cc0501318b</sys_scope>
+        <sys_update_name>sys_ws_operation_dabb3f01c304935043d978cc05013138</sys_update_name>
+        <sys_updated_by>priyam01</sys_updated_by>
+        <sys_updated_on>2026-10-19 07:46:43</sys_updated_on>
+        <web_service_definition display_value="Monitoring Alert Intake">0b0afb09c304935043d978cc05013126</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
